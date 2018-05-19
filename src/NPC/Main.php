@@ -35,10 +35,10 @@ class Main extends PluginBase{
 		$nbt = Entity::createBaseNBT($player, null, $player->getYaw(), $player->getPitch());
 		$nbt->setTag($player->namedtag->getTag("Skin"));
 		$npc = new Human($player->getLevel(), $nbt);
-		$npc->getDataPropertyManager()->setBlockPos(Human::DATA_PLAYER_FLAG_SLEEP, new Vector3($player->getX(), $player->getY(), $player->getZ()));
+		#$npc->getDataPropertyManager()->setBlockPos(Human::DATA_PLAYER_FLAG_SLEEP, new Vector3($player->getX(), $player->getY(), $player->getZ()));
 		#$npc->getDataPropertyManager()->setPropertyValue(Human::DATA_PLAYER_BED_POSITION, Human::DATA_TYPE_POS, new Vector3($player->getX(), $player->getY(), $player->getZ()));
 		#$npc->getDataPropertyManager()->setPropertyValue(Human::DATA_PLAYER_FLAG_SLEEP, Entity::DATA_TYPE_POS, new Vector3($player->getX(), $player->getY(), $player->getZ()));
-		$npc->setPlayerFlag(Human::DATA_PLAYER_FLAG_SLEEP, \true);
+		#$npc->setPlayerFlag(Human::DATA_PLAYER_FLAG_SLEEP, \true);
 		$npc->setNameTag("$name");
 		$npc->setNameTagVisible($type);
 		$npc->spawnTo($player);
